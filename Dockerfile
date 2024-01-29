@@ -8,6 +8,6 @@ RUN npm install
 COPY . .
 # RUN npm install -g typescript
 # RUN npm run build
-EXPOSE 5000
+# EXPOSE 5000
 
-CMD [ "node" "SwDev.js"]
+# CMD [ "node" "SwDev.js"]
