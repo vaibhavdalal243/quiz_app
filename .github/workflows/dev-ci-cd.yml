@@ -9,6 +9,15 @@ on:
   pull_request:
     branches: [ "development" ]
 
+env:
+  
+  AWS_REGION : "us-west-2"
+
+# Permission can be added at job level or workflow level    
+permissions:
+      id-token: write   # This is required for requesting the JWT
+      contents: read    # This is required for actions/checkout
+
 jobs:
   build:
     name: Build & push docker image
@@ -37,3 +46,15 @@ jobs:
             push: true
             tags: ${{ steps.meta.outputs.tags }}
             labels: ${{ steps.meta.outputs.labels }} 
+
+        - name: configure aws credentials
+          uses: aws-actions/configure-aws-credentials@v1.7.0
+          with:
+            role-to-assume: arn:aws:iam::022608205880:role/github-oidc-role-vaibhav #change to reflect your IAM role’s ARN
+            role-session-name: GitHub_to_AWS_via_FederatedOIDC
+            aws-region: ${{ env.AWS_REGION }}
+
+        # Hello from AWS: WhoAmI
+        - name: Sts GetCallerIdentity
+          run: |
+            aws sts get-caller-identity
