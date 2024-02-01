@@ -4,6 +4,6 @@ WORKDIR /app
 COPY . /app
 RUN npm install
 
-EXPOSE 5000
+EXPOSE 8484
 
-CMD npm start
+CMD ["nginx", "-g", "daemon off;"]
