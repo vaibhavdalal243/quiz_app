@@ -11,7 +11,7 @@
 
 # CMD ["nginx", "-g", "daemon off;"]
 
-FROM node:14 as builder
+FROM node:20.11.0-alpine3.18 as builder
 WORKDIR /app
 COPY package*.json /app/
 RUN npm install
