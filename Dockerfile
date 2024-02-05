@@ -3,8 +3,11 @@ WORKDIR /app
 COPY package*.json /app/
 RUN npm install
 COPY . /app
-RUN npm run build
-CMD ["nginx", "-g", "daemon off;"]
+# RUN npm run build
+CMD [ "npm", "start" ]
+
+
+# CMD ["nginx", "-g", "daemon off;"]
 
 
 ################
