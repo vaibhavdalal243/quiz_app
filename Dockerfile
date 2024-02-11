@@ -1,11 +1,26 @@
-FROM node:16 as builder
+FROM node:16.20.1
 WORKDIR /app
-COPY package*.json /app/
+COPY package.json ./
 RUN npm install
-COPY . /app
-RUN npm run build
-EXPOSE 8484
-CMD ["nginx", "-g", "daemon off;"]
+COPY . .
+EXPOSE 8585
+CMD ["npm","run","start"]
+
+
+
+
+
+
+
+
+# FROM node:16 as builder
+# WORKDIR /app
+# COPY package*.json /app/
+# RUN npm install
+# COPY . /app
+# RUN npm run build
+# EXPOSE 8484
+# CMD ["nginx", "-g", "daemon off;"]
 
 
 
