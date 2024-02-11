@@ -1,6 +1,6 @@
 FROM node:16.20.1
 WORKDIR /app
-COPY package*.json ./
+COPY package*.json /app/
 RUN npm install
 COPY . /app
 RUN export SKIP_PREFLIGHT_CHECK=true
