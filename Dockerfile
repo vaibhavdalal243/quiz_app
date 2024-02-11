@@ -3,7 +3,7 @@ WORKDIR /app
 COPY package*.json /app/
 RUN npm install
 COPY . /app
-RUN export SKIP_PREFLIGHT_CHECK=true
+# RUN export SKIP_PREFLIGHT_CHECK=true
 EXPOSE 3000
-RUN npm run build
+# RUN npm run build
 CMD ["npm", "run", "start"]
