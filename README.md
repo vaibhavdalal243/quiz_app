@@ -1,23 +1,5 @@
 # Our Quiz - Web Application
 
-[![pas](https://img.shields.io/static/v1?&message=ProgressiveApp.Store&color=74b9ff&style=flat&label=Follow%20Quiz%20App%20by%20Junaid%20at)](https://progressiveapp.store/pwa/Quiz-App-by-Junaid)
-
-### On PC
-
-<img src="./projectImages/pc.png"/>
-
-### On Mobile
-
-<img src="./projectImages/mobile.png"/>
-
-### Lighthouse Performance Testing Result
-
-<img src="./projectImages/lighthouse.png"/>
-
-### link : http://our-quiz.web.app/
-
-### Youtube Video (Demo) : https://youtu.be/RnTska40jiU
-
 ### _A Quiz Progressive Web Application built using ReactJs, Typescript. You can install it on your devices (Mobile, Desktop) and can use it offline_
 
 ## Functionalities
